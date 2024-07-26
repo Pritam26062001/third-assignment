@@ -1,0 +1,53 @@
+/* Basic styles for the navigation bar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333; /* Dark background for the navbar */
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-item a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    background-color: #555; /* Lighter background on hover */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .nav-list {
+        display: block;
+        background-color: gray; /* Gray background for small screens */
+    }
+    
+    .nav-item {
+        text-align: center;
+    }
+
+    .nav-item a {
+        padding: 15px;
+        border-bottom: 1px solid #ddd; /* Divider between links */
+    }
+
+    .nav-item a:last-child {
+        border-bottom: none; /* No border on the last item */
+    }
+}

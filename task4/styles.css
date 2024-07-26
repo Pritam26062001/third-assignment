@@ -1,0 +1,39 @@
+/* Basic styles for the grid layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px; /* Space between grid items */
+    padding: 10px;
+}
+
+/* Default layout: four items in a row */
+.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Media query for screens smaller than 1024px */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    }
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* One item per row */
+    }
+}
+
+.grid-item {
+    background-color: #4CAF50; /* Green background for items */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
